@@ -1,13 +1,14 @@
 package my.git.test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EventCalendar {
-	private static List<Event> events = new ArrayList<Event>();
+	private static int eventIdCounter = 0;
+	private static Map<Integer, Event> eventMap = new HashMap<Integer, Event>();
 	
 	public int addEvent(Event event) {
-		events.add(event);
-		return events.size();
+		eventMap.put(eventIdCounter++, event);
+		return eventIdCounter;
 	}
 }
