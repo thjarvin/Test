@@ -13,5 +13,8 @@ public class EventCalendarTest extends TestCase {
 	public void testAddFirstEventShouldReturn1() {
 		assertEquals(1, eventCalendar.addEvent(new Event("First", "First event")));
 	}
-
+	
+	public void testAddSecondEventShouldReturn2() {
+		assertEquals(2, eventCalendar.addEvent(new Event("Second", "Second event")));
+	}
 }
